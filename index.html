@@ -3,7 +3,8 @@
 <body>
 
 <button onclick="openWindow()">Open Window</button>
-<button onclick="communicateWithNewWindow()">Communicate with New Window</button>
+
+<div id="message"></div>
 
 <script>
 var newWindow;
@@ -12,11 +13,10 @@ function openWindow() {
   newWindow = window.open("newWindow.html");
 }
 
-function communicateWithNewWindow() {
+// Function to respond to the new window
+function respondToNewWindow() {
   if (newWindow) {
-    newWindow.alert("Hello, I am the opener window!");
-  } else {
-    alert("The new window has not been opened yet.");
+    newWindow.document.getElementById("message").innerHTML = "Hello, I hear you!";
   }
 }
 </script>
