@@ -2,12 +2,11 @@
 <html>
 <body>
 
-<button onclick="communicateWithOpener()">Communicate with Opener</button>
+<div id="message"></div>
 
 <script>
-function communicateWithOpener() {
-  window.opener.alert("Hello, I am the new window!");
-}
+window.opener.document.getElementById("message").innerHTML = "Hello, I am the new window!";
+window.opener.respondToNewWindow();
 </script>
 
 </body>
