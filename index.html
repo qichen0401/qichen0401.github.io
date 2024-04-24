@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="openWindow()">Open Window</button>
+<button onclick="communicateWithNewWindow()">Communicate with New Window</button>
+
+<script>
+var newWindow;
+
+function openWindow() {
+  newWindow = window.open("newWindow.html");
+}
+
+function communicateWithNewWindow() {
+  if (newWindow) {
+    newWindow.alert("Hello, I am the opener window!");
+  } else {
+    alert("The new window has not been opened yet.");
+  }
+}
+</script>
+
+</body>
+</html>
