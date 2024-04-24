@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="communicateWithOpener()">Communicate with Opener</button>
+
+<script>
+function communicateWithOpener() {
+  window.opener.alert("Hello, I am the new window!");
+}
+</script>
+
+</body>
+</html>
