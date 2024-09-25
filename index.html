@@ -12,7 +12,23 @@
 var newWindow;
 
 function openWindow() {
-  newWindow = window.open("newWindow.html");
+  var popupOption = getPopupOption(popupWidth, popupHeight);
+  newWindow = window.open("newWindow.html","abc",popupOption);
+}
+
+  function getPopupOption(popupWidth, popupHeight){ 
+    var popupX;
+    var popupY;	
+	try{
+	    popupX = Math.round(window.screenX + (window.outerWidth/2) - (popupWidth/2));
+	    popupY = Math.round(window.screenY + (window.outerHeight/2) - (popupHeight/2));
+	}catch(e){
+	    popupX = 0;  popupY = 0;				
+		console.error("getPopup_Option 팝업화면 위치 오류"+e);
+	}
+    var popupOption = "top="+popupY+", left="+popupX+", width="+popupWidth+", height="+popupHeight
+    							+", toolbar=no, menubar=no, directories=no, status=no, scrollorbars=yes, resizable=yes, location=no";
+    return popupOption;
 }
 
 function openWindowa() {
