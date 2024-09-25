@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<button onclick="openWindow()">Open Window 11</button>
+<button onclick="openWindow()">Open Window 111</button>
 
 <button onclick="openWindowa()">Open Window 2</button>
 
@@ -26,8 +26,7 @@ function openWindow() {
 	    popupX = 0;  popupY = 0;				
 		console.error("getPopup_Option 팝업화면 위치 오류"+e);
 	}
-    var popupOption = "top="+popupY+", left="+popupX+", width="+popupWidth+", height="+popupHeight
-    							+", toolbar=no, menubar=no, directories=no, status=no, scrollorbars=yes, resizable=yes, location=no";
+    var popupOption = "top="+popupY+", left="+popupX+", width="+popupWidth+", height="+popupHeight;
     return popupOption;
 }
 
