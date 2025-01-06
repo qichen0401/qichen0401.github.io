@@ -17,12 +17,20 @@
 
 <button onclick="openWindowa()">Open Window 2</button>
 
+	<button onclick="openPopup()">Delay Open Popup</button>
+
 <a href="https://linktr.ee/khaily" target="_blank">Open Example.com</a>
 	
 <div id="message"></div>
 
 <script>
 var newWindow;
+
+	function openPopup() {
+            setTimeout(function() {
+                newWindow = window.open("");
+            }, 200);
+        }
 
 function openWindow() {
   newWindow = window.open("newWindow.html");
