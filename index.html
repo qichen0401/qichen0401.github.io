@@ -2,7 +2,8 @@
 <html>
 <body>
 
-<button onclick="openWindow()">Open Window</button>
+<button onclick="openWindow()">JS Open Window</button>
+<button href="https://www.example.com" target="_blank">HTML Open Window</a>
 
 <button onclick="openWindowa()">Open Window 2</button>
 
@@ -14,23 +15,7 @@
 var newWindow;
 
 function openWindow() {
-  var popupOption = getPopupOption(600, 800);
-  newWindow = window.open("newWindow.html","abc",popupOption);
-}
-
-  function getPopupOption(popupWidth, popupHeight){ 
-    var popupX;
-    var popupY;	
-	try{
-	    popupX = Math.round(window.screenX + (window.outerWidth/2) - (popupWidth/2));
-	    popupY = Math.round(window.screenY + (window.outerHeight/2) - (popupHeight/2));
-	}catch(e){
-	    popupX = 0;  popupY = 0;				
-		console.error("getPopup_Option 팝업화면 위치 오류"+e);
-	}
-    var popupOption = "top="+popupY+", left="+popupX+", width="+popupWidth+", height="+popupHeight
-	    +", toolbar=no, menubar=no, directories=no, status=no, scrollorbars=yes, resizable=yes, location=no";
-    return popupOption;
+  newWindow = window.open("newWindow.html");
 }
 
 function openWindowa() {
